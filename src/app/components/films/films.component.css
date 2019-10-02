@@ -1,0 +1,62 @@
+.card-container{
+  background-color: #484848;
+  padding:1em;
+  height: 100%;
+  border-radius: 1em;
+}
+.film-text{
+  float:left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  color:white;
+}
+p{
+  padding-top:0.5em;
+}
+input{
+  margin-bottom:0.5em;
+  border-radius:0.2em;
+}
+.film-img{
+  float:right;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.film-title{
+  border-bottom: 0.1rem solid #9e4f60;
+  padding-bottom: 0.5em;
+}
+img{
+  height: 100%;
+  width: 100%;
+  border-radius: 1em;
+}
+.row{
+  margin-bottom: 1em;
+}
+span{
+  font-weight: bold;
+}
+.like-icon{
+  float: right;
+  color: white;
+}
+
+.selected-icon{
+  float: right;
+  color: red;
+}
+@media only screen and (max-width: 600px) {
+  .film-text {
+    width:100%;
+  }
+  .film-img {
+    width:100%;
+  }
+  .card-container{
+    height: 100vh;
+  }
+}

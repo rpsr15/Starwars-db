@@ -1,0 +1,19 @@
+.table{
+  background-color:#2d2d2d;
+  color:white;
+}
+th{
+  background-color: dimgrey;
+}
+.table-heading{
+  padding-top:1em;
+  padding-bottom:0.3em;
+  margin-bottom: 1em;
+  color:white;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #f2f288;
+}
+.table-container{
+  overflow-y: auto;
+  height: 70vh;
+}

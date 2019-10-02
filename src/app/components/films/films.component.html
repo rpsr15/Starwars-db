@@ -1,0 +1,33 @@
+<div class="container">
+  <input
+    matInput
+    placeholder="Filter by Name"
+    value=""
+    (input)="onSearchChange($event.target.value)"
+  />
+  <div *ngFor="let mov of movies">
+    <div class="row">
+      <div class="col">
+
+        <!-- Movie Card -->
+        <div class="card-container">
+          <div class="film-text">
+            <b class="film-title">
+              {{ mov.title }}
+              <mat-icon
+                (click)="onClick(mov.title)"
+                [ngClass]="mov.isFavorite ? 'selected-icon' : 'like-icon'"
+                >favorite</mat-icon
+              >
+            </b>
+            <p>{{ mov.opening_crawl }}</p>
+            <span>Director - {{ mov.director }}</span>
+            <span>Producer - {{ mov.producer }}</span>
+            <span>Release Date - {{ mov.release_date }}</span>
+          </div>
+        </div>
+        <!-- End of movie Card -->
+      </div>
+    </div>
+  </div>
+</div>

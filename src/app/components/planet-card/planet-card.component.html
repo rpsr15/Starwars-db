@@ -1,0 +1,22 @@
+<mat-card class="planet-card">
+  <div class="image-wrapper">
+    <button mat-icon-button class="like-btn">
+      <mat-icon
+        (click)="onClick()"
+        [ngClass]="isFavorite ? 'selected-icon' : 'like-icon'"
+        >favorite</mat-icon
+      >
+    </button>
+    <img
+      src="https://exoplanets.nasa.gov/system/news_items/main_images/252_Kepler62ebigger.jpg"
+    />
+  </div>
+  <div class="content-wrapper">
+    <p class="planet-title">{{ planetName }}</p>
+    <div class="info-wrapper">
+      <p class="info">{{ climate }} climate</p>
+      <p class="info">{{ terrain }}</p>
+      <p class="info">Population: {{ population }}</p>
+    </div>
+  </div>
+</mat-card>

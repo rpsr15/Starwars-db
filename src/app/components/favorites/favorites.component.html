@@ -1,0 +1,34 @@
+<div class="container">
+  <!-- Table for Favorite planets -->
+  <div class="row">
+    <div class="col-6">
+      <div class="table-heading">Planets</div>
+      <div class="table-container">
+        <table class="table table-striped">
+          <tbody>
+            <tr *ngFor="let planet of planets; index as i">
+              <td>
+                {{ planet }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<!-- Table for Favorite Movies -->
+    <div class="col-6">
+      <div class="table-heading">Movies</div>
+      <div class="table-container">
+        <table class="table table-striped">
+          <tbody>
+            <tr *ngFor="let movie of movies; index as i">
+              <td>
+                {{ movie }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="grid-container">
+  <input
+    matInput
+    placeholder="Filter by Name"
+    value=""
+    (input)="onSearchChange($event.target.value)"
+  />
+  <mat-grid-list
+    cols="{{ breakpoint }}"
+    rowHeight="2:2"
+    [gutterSize]="'10px'"
+    (window:resize)="onResize($event)"
+  >
+    <mat-grid-tile *ngFor="let planet of planets">
+      <app-planet-card
+        [isFavorite]="planet.isFavorite"
+        [planetName]="planet.name"
+        [population]="planet.population"
+        [terrain]="planet.terrain"
+        [climate]="planet.climate"
+        style="display: inline"
+      ></app-planet-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <!--Pagination-->
+  <ngb-pagination
+    class="justify-content-center"
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [collectionSize]="totalPlanets"
+    (pageChange)="loadPage(page)"
+  ></ngb-pagination>
+</div>
